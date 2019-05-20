@@ -7,9 +7,14 @@ pipeline {
 
   }
   stages {
-    stage('Install') {
+    stage('Starting') {
       steps {
         echo 'Installation Started'
+      }
+    }
+    stage('Install Deps') {
+      steps {
+        sh 'npm install'
       }
     }
   }
